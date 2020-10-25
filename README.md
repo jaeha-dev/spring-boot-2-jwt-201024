@@ -11,6 +11,7 @@
 ```
 * 계정 로그인 및 리소스 요청 시퀀스
 - Access(유효 상태), Refresh(유효 상태) -> 리소스 응답
+  (수정: 계정 로그인 시퀀스와 리소스 요청 시퀀스를 별도로 볼 것)
 - Access(만료 상태), Refresh(유효 상태) -> Access Token 재생성 및 리소스 응답
 - Access(만료 상태), Refresh(만료 상태) -> 로그인 요청
 ```
@@ -41,14 +42,14 @@
 │   ├── success_messages.properties: 성공 메시지 소스  
 │   └── web_messages.properties: 웹 출력용 메시지 소스  
 │  
-│── static  
+├── static  
 │   └── css:
 │       └── i18n.css: i18n.html을 위한 스타일 시트  
 │  
-│── templates  
+├── templates  
 │   └── i18n.html: Thymeleaf를 활용한 메시지 국제화 활용 예제  
 │  
-│── application.yml: 애플리케이션 설정 정보  
+├── application.yml: 애플리케이션 설정 정보  
 └── data.sql: 계정 및 계정 권한 데이터 초기화
               (파일에 작성된 해싱된 비밀번호는 test-password)  
 ```  
